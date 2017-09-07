@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <center>
+    <h1><%= @beer.name %></h1>
+    <img src="<%= @beer.image %>" alt="Geist Beer">
+  </center>
+  <h3>Style: <%= @beer.style %></h3>  
+  <h3>Description: <%= @beer.description %></h3>
+  <h3>Cost: <%= @beer.cost %></h3>
+</div>
+
+<%= link_to 'Edit', edit_beer_path(@beer) %> |
+<%= link_to 'Back', beers_path %>

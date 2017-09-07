@@ -1,0 +1,21 @@
+<h1>All Geist's Beer's</h1>
+<div class="row">
+  <% @beers.each do |beer| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= beer.image %>" alt="launchpad's pizza">
+      <div class="caption">
+        <h3><%= beer.name %></h3>
+        <h3>Cost: <%= beer.cost %></h3>
+        <%= link_to "More Info", beer, class: "btn btn-default" %>        
+      </div>
+    </div>    
+  </div>  
+  <% end %>
+</div>
+
+<br>
+
+<%= link_to "New Beer", new_beer_path, class: "btn btn-default" %>
+
+
